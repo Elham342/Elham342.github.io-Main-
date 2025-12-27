@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+
+  <!-- Inter font (matches CSS) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">WeatherApp</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="forecast.html">Forecast</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="about.html">About</a>
+    </div>
+ 
+     <div class="nav-links">
+        <a href="todoapp.html"class="web" >To-Do App</a>
+      
+    </div>
+   </nav>
+  <!-- MAIN CONTENT -->
+  <main class="hero">
+    <div class="hero-text">
+      <h1>About <span>This Project</span></h1>
+
+      <p>
+        This weather application merged with a To-Do application which was built using HTML, CSS, and JavaScript.
+        The weather app uses the OpenWeatherMap API to display real-time weather data. While the to do list app  save tasks inside localStorage so they stay after refreshing the page.
+      </p>
+
+      <p>
+        Main features of the weather app include city search, saving favorite cities using
+        local storage, and 5-day weather forecasts.
+      </p>
+       
+      <p>
+        On other hand, the main features of the to-do app include 
+        adding tasks, marking as done or undo, deleting tasks, clearing all tasks,saving tasks using localStorage
+      </p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Weather App</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

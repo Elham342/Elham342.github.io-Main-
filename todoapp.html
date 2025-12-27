@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">To-Do App</div>
+    <nav class="nav-links">
+      <a href="todoapp.html" class="active">Home</a>
+      <a href="About.html">About</a>
+  
+      
+    </nav>
+      <div class="nav-links">
+        <a href="index.html"class="web" >Weather App</a>
+    
+  </header>
+
+  <main class="hero">
+    <section class="hero-text">
+      <h2>To-Do List</h2>
+      <p>
+        A simple to-do list app that lets users add,
+        manage, and keep track of their daily tasks. 
+        It helps stay organized and get things done more easily. </p>
+    </section>
+
+    <section class="hero-text">
+      <form id="todoForm" class="todo-form">
+        <input id="taskInput" type="text" placeholder="Write a task here">
+        <button type="submit" class="btn-outline">Add</button>
+      </form>
+
+      <ul id="taskList" class="task-list">
+        <!-- tasks added here -->
+      </ul>
+
+      <button id="clearAll" class="btn-primary">Clear All Tasks</button>
+    </section>
+  </main>
+
+ <footer class="footer">
+    <p>© <span id="year"></span> To-Do App</p>
+  </footer>
+
+  <script src="todo.js"></script>
+</body>
+</html>

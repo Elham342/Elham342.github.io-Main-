@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5-Day Forecast</title>
+
+  <!-- Inter font (matches CSS) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">WeatherApp</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="forecast.html">Forecast</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="about.html">About</a>
+    </div>
+  
+      <div class="nav-links">
+        <a href="todoapp.html"class="web" >To-Do App</a>
+      </div>
+   </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="hero">
+    
+    <!-- LEFT SIDE -->
+    <div class="hero-text">
+      <h1>5-Day <span>Weather</span> Forecast</h1>
+      <p>Check the upcoming weather forecast for any city around the world.</p>
+
+      <!-- SEARCH -->
+      <div id="autocomplete-wrapper" class="autocomplete" >
+         <input id="forecastCityInput" type="text" placeholder="Search city..." autocomplete="off" />
+         <ul id="suggestions" class="suggestions" aria-label="suggestions">
+         </ul>      
+        <button class="btn-primary" id="forecastSearchBtn">
+          Search
+        </button>
+      </div>
+
+      <!-- OPTIONAL UNIT TOGGLE (matches CSS if you use it later) -->
+      <div class="unit-toggle">
+        <span>°C</span>
+        <label class="switch">
+          <input type="checkbox" id="unitToggle">
+          <span class="slider"></span>
+        </label>
+        <span>°F</span>
+      </div>
+
+      <p id="forecastError"></p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div id="forecastContainer"></div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Weather App</p>
+  </footer>
+
+  <script src="forecast.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

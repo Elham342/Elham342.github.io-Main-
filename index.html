@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">WeatherApp</div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="forecast.html">Forecast</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="about.html">About</a>
+    </nav>
+     <div class="nav-links">
+        <a href="todoapp.html"class="web" >To-Do App</a>
+      
+     </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="hero">
+
+    <!-- LEFT SIDE -->
+    <div class="hero-text">
+      <h1>
+        Simple weather insights<br>
+        <span>for your city</span>
+      </h1>
+
+      <p>Search for any city to check the current weather.</p>
+
+      <!-- SEARCH -->
+      <div id="autocomplete-wrapper" class="autocomplete" >
+         <input id="cityInput" type="text" placeholder="Search city..." autocomplete="off" />
+         <ul id="suggestions" class="suggestions" aria-label="suggestions"></ul>
+         <button id="searchBtn" class="btn-primary">Search</button> 
+         <button id="addFavoriteBtn" class="btn-outline">Add to Favorites</button>
+         <p id="error" class="error"></p>
+        </div>
+
+
+
+      <!-- UNIT TOGGLE -->
+      <div class="unit-toggle">
+        <span>°C</span>
+        <label class="switch">
+          <input type="checkbox" id="unitToggle"> 
+          <span class="slider"></span>
+        </label>
+        <span>°F</span>
+      </div>
+    </div>
+
+    <!-- WEATHER CARD -->
+    <div class="weather-card">
+      <img
+        id="weatherIcon"
+        src="https://openweathermap.org/img/wn/01d@2x.png"
+        alt="Weather Icon"
+      >
+
+      <div class="weather-info">
+        <h2 id="temp">-- °C</h2>
+        <p id="desc">No data</p>
+        <span id="city">—</span>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© <span id="year"></span> Weather App</p>
+  </footer>
+  <!-- JS -->
+  <script src="app.js"></script>
+</body>
+</html>
